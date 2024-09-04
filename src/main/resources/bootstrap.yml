@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    azure:
+      appconfiguration:
+        stores:
+          - connection-string: ${CONFIGSTORE_CONNECTION_STRING}
+            monitoring:
+              enabled: true
+              refresh-interval: 15s
+              triggers:
+                - key: sentinel
